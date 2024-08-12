@@ -45,9 +45,26 @@ syntax:
 #     else: print("Invalid Choice! Try Again")
 
 ###############################################
-while True:
-    print("1. Tea\n2. Coffee\n3. Milkshake\n0. Exit")
-    choice = int(input("Enter your choice: "))
-    if choice > 0 and choice <= 3: print("Good!")
-    elif choice == 0: break
-    else: print("Invalid Choice! Try Again")
+# while True:
+#     print("1. Tea\n2. Coffee\n3. Milkshake\n0. Exit")
+#     choice = int(input("Enter your choice: "))
+#     if choice > 0 and choice <= 3: print("Good!")
+#     elif choice == 0: break
+#     else: print("Invalid Choice! Try Again")
+
+###############################################
+
+# Sum of n natural number
+
+n = int(input("Enter n: "))
+sum = 0
+for i in range(1, n+1):
+    sum += i
+
+print(f"Sum of {n} natural numbers is {sum}")
+
+# Product of n numbers
+# sum of all even numbers upto n
+# print x numbers which are divisible by n
+
+# Gujarat Hotel -> Hotel Menu using match case (run until user exits the program) -> atleast 10 dish with price calculation and quantity
