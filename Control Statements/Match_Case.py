@@ -4,41 +4,53 @@ print("1. Tea")
 print("2. Coffee")
 print("3. Milk")
 choice = int(input("Enter your choice: "))
+quantity = 0;
+price = 0;
 
 match(choice):
     case 1:
-        print("1. Regular Tea")
-        print("2. Masala Tea")
-        print("3. Rajwadi Tea")
-        print("4. Milk Tea")
-        print("5. Green Tea")
-        choice = int(input("Enter your choice: "))
+        print("-> Regular Tea - ₹10")
+        print("-> Masala Tea - ₹15")
+        print("-> Rajwadi Tea - ₹20")
+        print("-> Milk Tea - ₹15")
+        print("-> Green Tea - ₹20")
+        choice = input("Enter your choice: ").casefold()
         
         match (choice):
-            case 1:
-                print("-> Here is your Regular Tea!")
+            case "regular tea":
+                quantity = int(input(f"How many {choice.title()} you want? -> "))
+                print(f"Here is your Order -> {quantity} {choice.title()}.")
+                price += quantity * 10
                 
-            case 2:
-                print("-> Here is your Masala Tea!")
+            case "masala tea":
+                quantity = int(input(f"How many {choice.title()} you want? -> "))
+                print(f"Here is your Order -> {quantity} {choice.title()}.")
+                price += quantity * 15
                 
-            case 3:
-                print("-> Here is your Rajwadi Tea!")
+            case "rajwadi tea":
+                quantity = int(input(f"How many {choice.title()} you want? -> "))
+                print(f"Here is your Order -> {quantity} {choice.title()}.")
+                price += quantity * 20
                 
-            case 4:
-                print("-> Here is your Milk Tea!")
+            case "milk tea":
+                quantity = int(input(f"How many {choice.title()} you want? -> "))
+                print(f"Here is your Order -> {quantity} {choice.title()}.")
+                price += quantity * 15
                 
-            case 5:
-                print("-> Here is your Green Tea!")
+            case "green tea":
+                quantity = int(input(f"How many {choice.title()} you want? -> "))
+                print(f"Here is your Order -> {quantity} {choice.title()}.")
+                price += quantity * 20
 
             case _:
-                print("-> Invalid Tea Choice!")
+                print("-> Invalid Coffee Tea!")
     
     case 2:
-        print("1. Regular Coffee")
-        print("2. Black Coffee")
-        print("3. Cold Coffee")
-        print("4. Hot Coffee")
-        print("5. Nescafe Coffee")
+        print("1. Regular Coffee - ₹20")
+        print("2. Black Coffee - ₹30")
+        print("3. Cold Coffee - ₹25")
+        print("4. Hot Coffee - ₹20")
+        print("5. Nescafe Coffee - ₹15")
         choice = int(input("Enter your choice: "))
         
         match (choice):
@@ -61,11 +73,11 @@ match(choice):
                 print("-> Invalid Coffee Choice!")
     
     case 3:
-        print("1. Regular Milk")
-        print("2. Skimmed Milk")
-        print("3. Bourvita Milk")
-        print("4. Goat Milk")
-        print("5. Cow Milk")
+        print("1. Regular Milk - ₹10")
+        print("2. Skimmed Milk - ₹15")
+        print("3. Bourvita Milk - ₹25")
+        print("4. Goat Milk - ₹20")
+        print("5. Cow Milk - ₹25")
         choice = int(input("Enter your choice: "))
         
         match (choice):
@@ -89,6 +101,8 @@ match(choice):
 
     case _: # default
         print("-> Invalid Choice!")
+
+print(f"Bill -> ₹{price}")
 
 """
 Problem Statement:
