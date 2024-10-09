@@ -61,4 +61,11 @@ new_set = {23, 45}
 
 # del mySet, dummy_set, disjoint_set, new_set
 
-print(mySet)
+# print(mySet)
+
+print(f"{mySet} -> {type(mySet)}")
+myList = list(mySet)
+print(f"{myList} -> {type(myList)}")
+
+myNewSet = set(myList)
+print(f"{myNewSet} -> {type(myNewSet)}")
