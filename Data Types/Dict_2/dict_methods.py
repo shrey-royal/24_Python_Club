@@ -28,12 +28,12 @@
 # v = list(weird_food_pairs.values())
 # print(k, v, sep='\n')
 
-strange_inventions = {
-    "Cat Translator" : "translates meows to human language",
-    "Self-tying Shoes" : "Shoes that tie themselves",
-    "Invisible Umbrella" : "Protect rain without blocking view",
-    "Teleportation Toaster" : "Toasts bread and teleports is to your plate",
-}
+# strange_inventions = {
+#     "Cat Translator" : "translates meows to human language",
+#     "Self-tying Shoes" : "Shoes that tie themselves",
+#     "Invisible Umbrella" : "Protect rain without blocking view",
+#     "Teleportation Toaster" : "Toasts bread and teleports is to your plate",
+# }
 
 # print(strange_inventions.pop("Invisible Umbrella 2.0", "No such key present!"))
 
@@ -47,7 +47,7 @@ strange_inventions = {
 
 # print(strange_inventions.update({"abcdxyz" : None}))
 
-print(strange_inventions)
+# print(strange_inventions)
 
 
 
@@ -55,4 +55,15 @@ print(strange_inventions)
 # 1. Check if a Given Key Already Exists in Dictionary
 # -> If you have learned about Python dictionaries, you will know that you can check if a given key exists or not in multiple ways. 
 
-# D1 = {'first_name' : 'Dhairya', 'age' : 20, 'height' : 5.5 , 'job' : 'Developer', 'company': 'Amazon'}
+D1 = {'first_name' : 'Dhairya', 'age' : 20, 'height' : 5.5 , 'job' : 'Developer', 'company': 'Amazon'}
+
+user_input = input("Enter any key: ").casefold()
+# print("Key is present" if user_input in D1.keys() else "Key is not present")
+
+found = False
+for v in D1.values():
+    if str(v).casefold() == user_input:
+        found = True
+        break
+
+print("Value is present" if found else "Value is not present")
