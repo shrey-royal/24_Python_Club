@@ -61,3 +61,7 @@ def function_name(argument/s):
 # smol praktis
 # Problem Statement: Create a function 'greet_user' that takes two parameters: 'name' (a string) and 'greeting' (a string). The greeting parameter should have a default value of "Hello". The function should print a message in the format: "greeting, name!". If no greeting is provided, it should use the default value.
 
+def addition(a: int | None = 0, b = 0):
+    print(f"{a} + {b} = {a+b}")
+
+addition(b=23)
