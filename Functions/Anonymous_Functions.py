@@ -24,3 +24,37 @@
 # lambda function without any parameters
 # greet = lambda : "Hello!"
 # print(greet())
+
+########################################################################
+
+import random
+
+pairs = [(random.randint(0, 10), random.randint(0, 10)) for _ in range(5)]
+print(pairs)
+
+# map(function, iterable) -> used to process data (work with any function who returns some data)
+
+# Normal
+# def map_fun(elem):
+#     return elem[0] * elem[1]
+
+# mappedList = list(map(map_fun, pairs))
+# print(mappedList)
+
+# //lambda
+# mappedList = list(map(lambda elem: elem[0] * elem[1], pairs))
+# print(mappedList)
+##########################################################################
+
+# filter(function, iterable) -> used with boolean function
+
+# //Normal
+# def filter_func(elem):
+#     return elem[0] > 5
+
+# filteredList = list(filter(filter_func, pairs))
+# print(filteredList)
+
+# //Lambda
+filteredList = list(filter(lambda elem: elem[0] > 5, pairs))
+print(filteredList)
