@@ -1,0 +1,3 @@
+This is file.txt
+Created for reading the data using python language
+Prem is currently learning Python!
